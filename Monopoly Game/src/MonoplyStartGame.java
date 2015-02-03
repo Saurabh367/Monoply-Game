@@ -2,6 +2,9 @@ import java.util.Scanner;
 import java.util.ArrayList;
 
 public class MonoplyStartGame {
+	public static int currentPlayer;
+	public static ArrayList<Players> players = new ArrayList<Players>();
+
 	public static void welcome() {
 		System.out.println("Welcome to Monoply!" + "\n" + "\n"
 				+ "Here are the rules:");
@@ -20,9 +23,9 @@ public class MonoplyStartGame {
 				.println("7) The player who still has money when knowone else does wins the game.");
 	}
 
-	public static void startGame() {
+	public static void startGame(Money money) {
 		Scanner bob = new Scanner(System.in);
-		ArrayList<Players> players = new ArrayList<Players>();
+		
 		System.out.println();
 		System.out.println("How many players would like to play (2, 3, or 4)?");
 		int lol = bob.nextInt();
@@ -30,41 +33,41 @@ public class MonoplyStartGame {
 			System.out.println();
 			System.out.println("What is player one's name?");
 			String a = bob.next();
-			players.add(new Players(a, 1500, null, null));
+			players.add(new Players(0, 1, a, null, money));
 			System.out.println();
 			System.out.println("What is player two's name?");
 			String b = bob.next();
-			players.add(new Players(b, 1500, null, null));
+			players.add(new Players(0, 2, b, null, money));
 		} else if(lol == 3) {
 			System.out.println();
 			System.out.println("What is player one's name?");
 			String c = bob.next();
-			players.add(new Players(c, 1500, null, null));
+			players.add(new Players(0, 1, c, null, money));
 			System.out.println();
 			System.out.println("What is player two's name?");
 			String d = bob.next();
-			players.add(new Players(d, 1500, null, null));
+			players.add(new Players(0, 2, d, null, money));
 			System.out.println();
 			System.out.println("What is player three's name?");
 			String e = bob.next();
-			players.add(new Players(e, 1500, null, null));
+			players.add(new Players(0, 3, e, null, money));
 		} else if (lol == 4) {
 			System.out.println();
 			System.out.println("What is player one's name?");
 			String f = bob.next();
-			players.add(new Players(f, 1500, null, null));
+			players.add(new Players(0, 1, f, null, money));
 			System.out.println();
 			System.out.println("What is player two's name?");
 			String g = bob.next();
-			players.add(new Players(g, 1500, null, null));
+			players.add(new Players(0, 2, g, null, money));
 			System.out.println();
 			System.out.println("What is player three's name?");
 			String h = bob.next();
-			players.add(new Players(h, 1500, null, null));
+			players.add(new Players(0, 3, h, null, money));
 			System.out.println();
 			System.out.println("What is player four's name?");
 			String i = bob.next();
-			players.add(new Players(i, 1500, null, null));
+			players.add(new Players(0, 4, i, null, money));
 
 		} else {
 			System.out.println();
@@ -76,7 +79,7 @@ public class MonoplyStartGame {
 			System.out
 					.println("What character would you like to use "
 							+ players.get(0).getName()
-							+ " a 1)top hat, 2)thimble, 3)iron, 4)shoe, 5)battleship, or a 6)cannon");
+							+ " a 1)top hat, 2)thimble, 3)iron, 4)shoe, 5)battleship, or a 6)cannon?");
 			int j = bob.nextInt();
 			switch (j) {
 			case 1:
@@ -98,13 +101,14 @@ public class MonoplyStartGame {
 				players.get(0).setToken("cannon");
 				break;
 			}
+			System.out.println();
 			System.out.println(players.get(0).getName() + " your token is "
-					+ players.get(0).getToken());
+					+ players.get(0).getToken() + ".");
 			System.out.println();
 			System.out
 					.println("What character would you like to use "
 							+ players.get(1).getName()
-							+ " a 1)top hat, 2)thimble, 3)iron, 4)shoe, 5)battleship, or a 6)cannon");
+							+ " a 1)top hat, 2)thimble, 3)iron, 4)shoe, 5)battleship, or a 6)cannon?");
 			int k = bob.nextInt();
 			switch (k) {
 			case 1:
@@ -126,6 +130,7 @@ public class MonoplyStartGame {
 				players.get(1).setToken("cannon");
 				break;
 			}
+			System.out.println();
 			System.out.println(players.get(1).getName() + " your token is "
 					+ players.get(1).getToken() + ".");
 

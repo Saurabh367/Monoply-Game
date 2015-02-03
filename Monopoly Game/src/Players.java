@@ -1,17 +1,21 @@
 public class Players {
-	int position = 0;
+	int position;
 	int id;
 	String name;
 	String token;
 	Money money = new Money(1500);
 	
-	public Players(int p, int i, String n, String t) {
+	public Players(int p, int i, String n, String t, Money m) {
 		position=p;
 		id = i;
 		name = n;
 		token=t;
+		money=m;
 	}
-
+	
+	public Money getMoney1() {
+		return money;
+	}
 	public int getPosition() {
 		return position;
 	}
@@ -51,6 +55,9 @@ public class Players {
 	public void setMoney(Money money) {
 		this.money = money;
 	}
+
+	
+	
 	
 	
 }

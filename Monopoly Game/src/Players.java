@@ -3,9 +3,9 @@ public class Players {
 	int id;
 	String name;
 	String token;
-	Money money = new Money(1500);
+	int money;
 	
-	public Players(int p, int i, String n, String t, Money m) {
+	public Players(int p, int i, String n, String t, int m) {
 		position=p;
 		id = i;
 		name = n;
@@ -13,9 +13,7 @@ public class Players {
 		money=m;
 	}
 	
-	public Money getMoney1() {
-		return money;
-	}
+
 	public int getPosition() {
 		return position;
 	}
@@ -48,18 +46,23 @@ public class Players {
 		this.token = token;
 	}
 
-	public Money getMoney() {
+	public int getMoney() {
 		return money;
 	}
 
-	public void setMoney(Money money) {
+	public void setMoney(int money) {
 		this.money = money;
 	}
+	public int tossDie() {
+		Dice dice = new Dice();
+		int playerRoll = dice.roll();
+		return playerRoll;
 
 	
 	
 	
 	
+}
 }
 	
 	

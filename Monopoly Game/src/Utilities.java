@@ -50,7 +50,7 @@ public class Utilities extends Squares{
     	Scanner choice = new Scanner(System.in);
     		if(((Utilities) squares.get(MonoplyStartGame.players.get(MonoplyStartGame.currentPlayer).getPosition())).getOwnerId()==0)
     		{
-    		System.out.println(MonoplyStartGame.players.get(MonoplyStartGame.currentPlayer).getName() + " landed on " + ((Squares) squares.get(MonoplyStartGame.players.get(MonoplyStartGame.currentPlayer).getPosition())).getName() + " and it costs " + ((Properties) squares.get(MonoplyStartGame.players.get(MonoplyStartGame.currentPlayer).getPosition())).getCost() + ". /n Would you like to buy it? 1)Yes 2)No");
+    		System.out.println(MonoplyStartGame.players.get(MonoplyStartGame.currentPlayer).getName() + " landed on " + squares.get(MonoplyStartGame.players.get(MonoplyStartGame.currentPlayer).getPosition()).getName() + " and it costs " + ((Utilities) squares.get(MonoplyStartGame.players.get(MonoplyStartGame.currentPlayer).getPosition())).getCost() + ". /n Would you like to buy it? 1)Yes 2)No");
     		int userAwnser=choice.nextInt();
     		if(userAwnser==1)
     		{

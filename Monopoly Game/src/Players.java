@@ -53,7 +53,7 @@ public class Players {
 	public void setMoney(int money) {
 		this.money = money;
 	}
-	public int tossDie() {
+	public static int tossDie() {
 		Dice dice = new Dice();
 		int playerRoll = dice.roll();
 		return playerRoll;

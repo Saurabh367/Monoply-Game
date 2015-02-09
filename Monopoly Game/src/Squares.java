@@ -20,11 +20,11 @@ public class Squares {
 	public void setName(String name) {
 		this.name = name;
 	}
-	static ArrayList squares=new ArrayList();
+	static ArrayList<Squares> squares=new ArrayList<Squares>();
 
 
 
-	public void addProperties(){
+	public static void addProperties(){
 		
 		squares.add(new PassingGo("Go"));
 		squares.add(new Properties("Mediterranean Avenue", "brown", 60, 2, 10, 30, 90, 160, 250, 50, 0));

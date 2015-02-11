@@ -39,7 +39,7 @@ public class Squares {
 		squares.add(new Jail("Jail"));
 		squares.add(new Properties("St. James Place", "purple", 140, 10, 50, 150, 450, 625, 750, 100, 0));
 		squares.add(new Utilities("Electric Company", "speacial", 150, 0, 0));
-		squares.add(new Properties("States Avenue", "purple", 140, 10, 50, 150, 450, 625, 750, 100, 70));
+		squares.add(new Properties("States Avenue", "purple", 140, 10, 50, 150, 450, 625, 750, 100, 0));
 		squares.add(new Properties("Virginia Avenue", "purple", 160, 12, 60, 180, 500, 700, 900, 100, 0));
 		squares.add(new Railroads("Pen1nsylvania Railroad", "black", 200, 25, 0));
 		squares.add(new Properties("St. James Place", "orange", 180, 14, 70, 200, 550, 750, 950, 100, 0));

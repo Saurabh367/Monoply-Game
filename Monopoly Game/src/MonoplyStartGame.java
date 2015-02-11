@@ -350,14 +350,13 @@ public class MonoplyStartGame {
 		int playerTotal = lol;
 		while (playerTotal > 1) {
 		int roll=Players.tossDie();
-		System.out.println(roll);
+		System.out.println(players.get(currentPlayer).getName() + " rolled a " + roll);
 		players.get(currentPlayer).setPosition(players.get(currentPlayer).getPosition() + roll);
 		if(players.get(currentPlayer).getPosition()>39)
 		{
 			players.get(currentPlayer).setPosition(players.get(currentPlayer).getPosition()-39);
 		}
 		
-		System.out.println(players.get(currentPlayer).getPosition());
 			
 			switch (players.get(currentPlayer).getPosition()) {
 			case 0:
@@ -481,7 +480,7 @@ public class MonoplyStartGame {
 				break;
 			
 			}
-			if(currentPlayer==playerTotal)
+			if(currentPlayer==playerTotal-1)
 			{
 				currentPlayer=0;
 			}

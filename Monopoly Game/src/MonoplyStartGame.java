@@ -23,7 +23,7 @@ public class MonoplyStartGame {
 				.println("7) The player who still has money when knowone else does wins the game.");
 	}
 
-	public static void startGame() {
+	public static void startGame(int d) {
 		Scanner bob = new Scanner(System.in);
 
 		System.out.println();
@@ -355,6 +355,7 @@ public class MonoplyStartGame {
 		if(players.get(currentPlayer).getPosition()>39)
 		{
 			players.get(currentPlayer).setPosition(players.get(currentPlayer).getPosition()-39);
+			PassingGo.passedGo();
 		}
 		
 			

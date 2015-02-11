@@ -1,7 +1,8 @@
 
 public class GoToJail extends Squares{
-	public GoToJail(String n) {
-		super(n);
+	public GoToJail(String n, int o) {
+		setName(n);
+		setOwnerId(o);
 		
 	}
 	public static void landedOnGoToJail()

@@ -1,7 +1,8 @@
 
 public class FreeParking extends Squares{
-	public FreeParking(String n) {
-		super(n);
+	public FreeParking(String n, int o) {
+		setName(n);
+		setOwnerId(o);
 		
 	}
 	public static void landedOnFreeParking()

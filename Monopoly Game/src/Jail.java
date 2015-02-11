@@ -1,8 +1,9 @@
 
 public class Jail extends Squares{
-	public Jail(String n)
+	public Jail(String n, int o)
 	{
-		super(n);
+		setName(n);
+		setOwnerId(o);
 	}
 	public static void landedOnJail()
 	{

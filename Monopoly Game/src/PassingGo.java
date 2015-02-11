@@ -1,8 +1,9 @@
 
 public class PassingGo extends Squares{
 
-	public PassingGo(String n) {
-		super(n);
+	public PassingGo(String n, int o) {
+		setName(n);
+		setOwnerId(o);
 		
 	}
 	public static void passedGo()

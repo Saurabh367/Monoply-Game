@@ -1,9 +1,9 @@
 public class Players {
-	int position;
-	int id;
-	String name;
-	String token;
-	int money;
+	private int position;
+	private int id;
+	private String name;
+	private String token;
+	private int money;
 	
 	public Players(int p, int i, String n, String t, int m) {
 		position=p;

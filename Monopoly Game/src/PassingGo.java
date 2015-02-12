@@ -1,8 +1,10 @@
 
 public class PassingGo extends Squares{
 
-	public PassingGo(String n, int o) {
+	public PassingGo(String n, int c, int v, int o) {
 		setName(n);
+		setCost(c);
+		setValue(v);
 		setOwnerId(o);
 		
 	}

@@ -1,7 +1,9 @@
 
 public class CommunityChestAndChance extends Squares{
-	public CommunityChestAndChance(String n, int o) {
+	public CommunityChestAndChance(String n, int c, int v, int o) {
 		setName(n);
+		setCost(c);
+		setValue(v);
 		setOwnerId(o);
 		
 	}

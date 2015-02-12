@@ -1,7 +1,9 @@
 
 public class TaxMoney extends Squares{
-	public TaxMoney(String n, int o) {
+	public TaxMoney(String n, int c, int v, int o) {
 		setName(n);
+		setCost(c);
+		setValue(v);
 		setOwnerId(o);
 		
 	}

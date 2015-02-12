@@ -6,8 +6,8 @@ public class MonoplyStartGame {
 	public static ArrayList<Players> players = new ArrayList<Players>();
 
 	public static void welcome() {
-		System.out.println("Welcome to Monoply!" + "\n" + "\n"
-				+ "Here are the rules:");
+	
+		System.out.println("Here are the rules:");
 		System.out
 				.println("1) The object of the game is to become the wealthiest player through buying, renting and selling of property.");
 		System.out
@@ -23,7 +23,7 @@ public class MonoplyStartGame {
 				.println("7) The player who still has money when knowone else does wins the game.");
 	}
 
-	public static void startGame(int d) {
+	public static void startGame(int total) {
 		Scanner bob = new Scanner(System.in);
 
 		System.out.println();
@@ -289,7 +289,7 @@ public class MonoplyStartGame {
 					.println("What character would you like to use "
 							+ players.get(2).getName()
 							+ " a 1)top hat, 2)thimble, 3)iron, 4)shoe, 5)battleship, or a 6)cannon?");
-			int r = bob.nextInt();
+			int r= bob.nextInt();
 			switch (r) {
 			case 1:
 				players.get(2).setToken("top hat");
@@ -349,7 +349,7 @@ public class MonoplyStartGame {
 		System.out.println("Game start!");
 		int playerTotal = lol;
 		while (playerTotal > 1) {
-		int roll=Players.tossDie();
+	    int roll=Players.tossDie();
 		System.out.println(players.get(currentPlayer).getName() + " rolled a " + roll);
 		players.get(currentPlayer).setPosition(players.get(currentPlayer).getPosition() + roll);
 		if(players.get(currentPlayer).getPosition()>39)
@@ -491,4 +491,7 @@ public class MonoplyStartGame {
 			}
 		}
 	}
+
+	
+
 }

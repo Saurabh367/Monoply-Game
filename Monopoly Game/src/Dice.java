@@ -1,12 +1,12 @@
 public class Dice {
     
-    private int diceOne = 0;
-    private int diceTwo = 0;
-    private int total = 0;
+    private static int diceOne = 0;
+    private static int diceTwo = 0;
+    private static int total = 0;
     
     
     
-    public int roll (){ 
+    public static int roll (){ 
     diceOne = (int)(Math.random()*6) + 1;
 	diceTwo = (int)(Math.random()*6) + 1;
 	

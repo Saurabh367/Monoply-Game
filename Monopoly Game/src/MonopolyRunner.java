@@ -3,8 +3,10 @@ public class MonopolyRunner {
 
 	public static void main(String[] args) {
 		Squares.addProperties();
+		WelcomeGraphic.letsGo();
 		MonoplyStartGame.welcome();
-		MonoplyStartGame.startGame();
+	    int total=Dice.roll();
+		MonoplyStartGame.startGame(total);
 
 	}
 
